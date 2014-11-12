@@ -5,6 +5,14 @@ define('DEBUG', true);
 
 
 define('DATE', date('Y-m-d H:i:s'));
+function test()
+{
+    echo "helloworld";
+}
+test();
+
+
+
 
 
 
