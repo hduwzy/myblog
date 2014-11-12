@@ -1,6 +1,6 @@
 <?php
 /**
- * Àà¼ÓÔØÆ÷
+ * ç±»åŠ è½½å™¨
  * @author wzy
  */
 class Loader
