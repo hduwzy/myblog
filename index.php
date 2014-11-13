@@ -18,6 +18,13 @@ spl_autoload_register(array($loader, 'autoload'));
 // 初始化配置文件读写类
 Config::setRoot(ROOTPATH . 'conf/');
 
+Caller::setActionsuffix('Action');
+Caller::setCalleesuffix('Controller');
+Caller::setCalleepath(ROOTPATH . 'controllers/');
+
+
+$callinfo = isset($_GET['do']) ? $_GET['do'] : 'default-calleenotfound';
+Caller::call($callinfo);exit;
 
 Blog_Base::test();
 Router::test();
