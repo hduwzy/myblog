@@ -22,9 +22,6 @@ class Config
 	 */
 	public static function getRoot()
 	{
-		if (empty(self::$_root)) {
-			self::$_root = PROJECT_PATH . '/conf/';
-		}
 		return self::$_root;
 	}
 	
