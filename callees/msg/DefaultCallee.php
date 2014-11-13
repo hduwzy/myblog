@@ -3,7 +3,7 @@
  * 默认callee
  * @author wzy
  */
-class DefaultController
+class DefaultCallee
 {
 	/**
 	 * 未找到callee

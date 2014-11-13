@@ -113,17 +113,17 @@ class Loader
 	 * 加载控制器
 	 * @param string $controller
 	 */
-	public function loadController($controller = '')
-	{
-		$cpath = $this->getControllerpath();
-		$controller = ucfirst($controller) . 'Controller';
-		$filename = $cpath . "$controller.php";
-		if (file_exists($filename)) {
-			include_once $filename;
-			return true;
-		}
-		return false;
-	}
+// 	public function loadController($controller = '')
+// 	{
+// 		$cpath = $this->getControllerpath();
+// 		$controller = ucfirst($controller) . 'Controller';
+// 		$filename = $cpath . "$controller.php";
+// 		if (file_exists($filename)) {
+// 			include_once $filename;
+// 			return true;
+// 		}
+// 		return false;
+// 	}
 	
 	/**
 	 * 用于注册spl_autoload_register的自动加载函数

@@ -3,7 +3,7 @@
  * 测试专用callee
  * @author wzy
  */
-class TestController
+class TestCallee
 {
 	/**
 	 * 测试函数

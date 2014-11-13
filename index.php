@@ -19,19 +19,12 @@ spl_autoload_register(array($loader, 'autoload'));
 Config::setRoot(ROOTPATH . 'conf/');
 
 Caller::setActionsuffix('Action');
-Caller::setCalleesuffix('Controller');
-Caller::setCalleepath(ROOTPATH . 'controllers/');
+Caller::setCalleesuffix('Callee');
+Caller::setCalleepath(ROOTPATH . 'callees/');
 
 
-$callinfo = isset($_GET['do']) ? $_GET['do'] : 'default-calleenotfound';
+$callinfo = isset($_GET['do']) ? $_GET['do'] : 'msg.default-calleenotfound';
 Caller::call($callinfo);exit;
-
-Blog_Base::test();
-Router::test();
-
-
-
-exit;
 
 
 
