@@ -1,7 +1,7 @@
 <?php
 return array(
 	'host' => 'localhost',
-	'port' => '3066', 
-	'user' => 'admin', 
+	'dbname' => 'test', 
+	'user' => 'root', 
 	'password' => 'root'		
 );

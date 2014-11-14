@@ -21,4 +21,7 @@ Caller::setCalleesuffix('Callee');
 Caller::setCalleepath(ROOTPATH . 'callees/');
 
 $callinfo = isset($_GET['do']) ? $_GET['do'] : 'msg-calleenotfound';
-Caller::call($callinfo);exit;
+Caller::call($callinfo);
+
+
+// end

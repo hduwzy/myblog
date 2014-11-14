@@ -67,7 +67,14 @@ class View
 	public function render($tpl = '', $echo = true)
 	{
 		ob_start();
-		
+		include $tpl;
+		$content = ob_get_contents();
+		ob_end_clean();
+		if ($echo) {
+			echo $content;
+		} else {
+			return $content;
+		}
 	}
 	
 	/**
@@ -76,6 +83,10 @@ class View
 	 */
 	public function jsonrender($echo = true)
 	{
-		
+		if ($echo) {
+			echo json_encode($this->_tplvar);
+		} else {
+			return json_encode($this->_tplvar);
+		}
 	}
 }
