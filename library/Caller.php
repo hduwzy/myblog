@@ -101,14 +101,14 @@ class Caller
 				include_once $calleepath;
 			} else {
 				// 如果没有默认callee该怎么办,写成配置？
-				return self::call('msg.default-calleenotfound');
+				return self::call('msg-calleenotfound');
 			}
 		}
 		$calleeobj = new $callee;
 		if (method_exists($calleeobj, $action)) { 
 			return call_user_func_array(array($calleeobj, $action), $params);
 		} else { // 目标方法不存在的情况
-			return self::call('msg.default-actionnotfound');
+			return self::call('msg-actionnotfound');
 		}
 	}
 }

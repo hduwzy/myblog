@@ -3,7 +3,7 @@
  * 默认callee
  * @author wzy
  */
-class DefaultCallee
+class MsgCallee
 {
 	/**
 	 * 未找到callee
