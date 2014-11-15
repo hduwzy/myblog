@@ -21,12 +21,16 @@ class TestCallee
 		Mysql::connect(Config::get('blog.test.*'));
 // 		Mysql::execute("insert into student values(null, 'Tom', 24)");
 // 		Mysql::execute("insert into student values(null, 'Jam', 29)");
-		$result = Mysql::execute("insert into students values(null, 'Tuto', 21)");
-		if (!$result) {
+// 		$result = Mysql::execute("insert into students values(null, 'Tuto', 21)");
+// 		if (!$result) {
+// 			echo Mysql::error();
+// 			return ;
+// 		}
+		$result = Mysql::query("select * from student");
+		$sql = "delete from student where 1=1";
+		if (!Mysql::execute($sql)) {
 			echo Mysql::error();
-			return ;
 		}
-		$id = Mysql::insert_id();
-		print_r($id);
+		print_r($result);
 	}
 }
